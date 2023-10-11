@@ -15,3 +15,16 @@ footer p {
 .nav-pills {
   --bs-nav-pills-link-active-bg: #000000 !important;
 }
+
+.clear {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(244, 131, 216);
+  transform: skewY(20deg);
+}
+
+.box1 {
+  position: relative;
+}

@@ -1,5 +1,5 @@
-<div class="contents row">
-  <div class="content_post">
+
+  <div class="container">
     <div class="more">
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
@@ -23,6 +23,8 @@
         <%= form.text_area :action, placeholder: "行動", rows: "2" %>
         <%= form.submit "コミット" %>
       <% end %>
+      <%=link_to 'Win', vision_win_path(@vision.id), class: "btn btn-dark" %>
+      <%=link_to 'back', vision_back_path(@vision.id), class: "btn btn-dark" %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
@@ -38,4 +40,3 @@
       <% end %>
     </div>
   </div>
-</div>

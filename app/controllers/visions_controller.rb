@@ -34,6 +34,18 @@ class VisionsController < ApplicationController
     @todaygoals = @vision.todaygoals.includes(:user)
   end
 
+  def win
+    @vision = Vision.find(params[:vision_id])
+    @vision.update(clear: true)
+    redirect_to root_path
+  end
+
+  def back
+    @vision = Vision.find(params[:vision_id])
+    @vision.update(clear: false)
+    redirect_to root_path
+  end
+
   private
 
   def vision_params

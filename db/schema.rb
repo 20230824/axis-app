@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_09_114256) do
 
   create_table "visions", charset: "utf8", force: :cascade do |t|
     t.text "text"
+    t.boolean "clear", default: false, null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
