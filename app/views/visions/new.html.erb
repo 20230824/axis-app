@@ -1,9 +1,9 @@
 <div class="contents row">
   <div class="container">
-    <h3>投稿する</h3>
+    <h3 class="set">設定する</h3>
     <%= form_with(model: @vision, local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
-      <%= form.submit "SEND" %>
+      <%= form.text_area :text, placeholder: "you vision", rows: "10" %>
+      <%= form.submit "コミット" %>
     <% end %>
   </div>
 </div>

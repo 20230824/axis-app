@@ -21,13 +21,13 @@
         <%= form.text_area :object, placeholder: "目的", rows: "2" %>
         <%= form.text_area :plan,   placeholder: "計画", rows: "2" %>
         <%= form.text_area :action, placeholder: "行動", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.submit "コミット" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
     <div class="todaygoals">
-      <h4>＜コメント一覧＞</h4>
+      <h4>＜目標一覧＞</h4>
       <% @todaygoals.each do |todaygoal| %>
         <p>
             日付：<%= todaygoal.created_at %><br>
