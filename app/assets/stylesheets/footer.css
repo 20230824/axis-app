@@ -1,0 +1,17 @@
+body {
+  font-family: 'Rampart One', sans-serif !important;
+  background-color: #EEEEEE !important;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 900 !important;
+  font-size: 40px;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #000000 !important;
+}
