@@ -6,6 +6,10 @@
         <h1 class="h3 mb-3 fw-normal"><%= @vision.text %></h1>
         <%= @vision.user.nickname %>
 
+        <li>
+          <%= link_to '削除', vision_path(@vision.id), data: { turbo_method: :delete } %>
+        </li>
+
         <div class="form-floating">
           <%= form.label :"目的"%><br>
           <%= form.text_area :object, placeholder: "目的", rows: "2" ,class: "form-control", id: "floatingInput" %>
