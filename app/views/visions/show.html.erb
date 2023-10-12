@@ -21,7 +21,7 @@
         <%= form.text_area :object, placeholder: "目的", rows: "2" %>
         <%= form.text_area :plan,   placeholder: "計画", rows: "2" %>
         <%= form.text_area :action, placeholder: "行動", rows: "2" %>
-        <%= form.submit "コミット" %>
+        <%= form.submit "コミット", class: "btn btn-dark" %>
       <% end %>
       <%=link_to 'Win', vision_win_path(@vision.id), class: "btn btn-dark" %>
       <%=link_to 'back', vision_back_path(@vision.id), class: "btn btn-dark" %>

@@ -22,7 +22,7 @@
           <li class="nav-item"><%= link_to "目標なし", destroy_user_session_path, data: { turbo_method: :delete }, class: "out nav-link active link-light" %></li>
           <li class="nav-item"><%= link_to "設定する", new_vision_path, class: "post nav-link active link-light mx-3" %></li>
         <% else %>
-          <li class="nav-item"><%= link_to "ログイン", new_user_session_path, class: "post nav-link active link-light" %></li>
+          <li class="nav-item"><%= link_to "目標あり", new_user_session_path, class: "post nav-link active link-light" %></li>
           <li class="nav-item"><%= link_to "新規登録", new_user_registration_path, class: "post nav-link active link-light mx-3" %></li>
         <% end %>
       </ul>
