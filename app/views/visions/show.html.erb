@@ -1,23 +1,23 @@
 <div class="d-flex align-items-center py-4 bg-body-tertiary">
   <div class="form-signin w-100 m-auto">
     <form>
-      <%= form_with(model: [@vision, @todaygoal], local: true) do |form| %>
+      <%= form_with(model: [@vision, @todaygoal], class: "form-floting", local: true) do |form| %>
         
         <h1 class="h3 mb-3 fw-normal"><%= @vision.text %></h1>
         <%= @vision.user.nickname %>
 
         <div class="form-floating">
-          <%= form.label :"目的"%>
+          <%= form.label :"目的"%><br>
           <%= form.text_area :object, placeholder: "目的", rows: "2" ,class: "form-control", id: "floatingInput" %>
         </div>
 
         <div class="form-floating">
-          <%= form.label :"計画"%>
+          <%= form.label :"計画"%><br>
           <%= form.text_area :plan, placeholder: "計画", rows: "2" ,class: "form-control", id: "floatingInput" %>
         </div>
 
         <div class="form-floating">
-          <%= form.label :"行動"%>
+          <%= form.label :"行動"%><br>
           <%= form.text_area :action, placeholder: "行動", rows: "2" ,class: "form-control", id: "floatingInput" %>
         </div>
 

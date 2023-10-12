@@ -1,9 +1,14 @@
+<div class="text-center">
+  <h3 class="set">目標</h3>
+</div>
+
 <div class="contents row">
   <div class="container">
-    <h3 class="set">目標</h3>
-    <%= form_with(model: @vision, local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "you vision", rows: "10" %>
-      <%= form.submit "コミット" %>
-    <% end %>
+    <div class="d-flex align-items-center justify-content-center py-4 bg-body-tertiary">
+      <%= form_with(model: @vision, local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "you vision", rows: "10" %>
+        <%= form.submit "コミット" %>
+      <% end %>
+    </div>  
   </div>
 </div>
