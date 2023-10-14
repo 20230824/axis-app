@@ -1,49 +1,50 @@
 <div class="d-flex align-items-center py-4 bg-body-tertiary">
   <div class="form-signin w-100 m-auto">
     <form>
-      <%= form_with(model: [@vision, @todaygoal], class: "form-floting", local: true) do |form| %>
+      <%= form_with(model: [@vision, @todaygoal], local: true) do |form| %>
         
         <h1 class="h3 mb-3 fw-normal"><%= @vision.text %></h1>
-        <%= @vision.user.nickname %>
+          <%= @vision.user.nickname %>
 
-        <li>
-          <%= link_to '削除', vision_path(@vision.id), data: { turbo_method: :delete } %>
-        </li>
+            <li>
+              <%= link_to '削除', vision_path(@vision.id), data: { turbo_method: :delete } %>
+            </li>
 
-        <div class="form-floating">
-          <%= form.label :"目的"%><br>
-          <%= form.text_area :object, placeholder: "目的", rows: "2" ,class: "form-control", id: "floatingInput" %>
-        </div>
+          <div class="form-floating">
+            <%= form.label :"目的"%><br>
+            <%= form.text_area :object, placeholder: "目的", rows: "2" ,class: "form-control", id: "floatingInput" %>
+          </div>
 
-        <div class="form-floating">
-          <%= form.label :"計画"%><br>
-          <%= form.text_area :plan, placeholder: "計画", rows: "2" ,class: "form-control", id: "floatingInput" %>
-        </div>
+          <div class="form-floating">
+            <%= form.label :"計画"%><br>
+            <%= form.text_area :plan, placeholder: "計画", rows: "2" ,class: "form-control", id: "floatingInput" %>
+          </div>
 
-        <div class="form-floating">
-          <%= form.label :"行動"%><br>
-          <%= form.text_area :action, placeholder: "行動", rows: "2" ,class: "form-control", id: "floatingInput" %>
-        </div>
+          <div class="form-floating">
+            <%= form.label :"行動"%><br>
+            <%= form.text_area :action, placeholder: "行動", rows: "2" ,class: "form-control", id: "floatingInput" %>
+          </div>
 
-        <%= form.submit "コミット", class: "btn btn-dark btn btn-primary w-100 py-2 mt-3" %>
-        
-        <div class="mx-auto">
-          <%=link_to 'Win', vision_win_path(@vision.id), class: "btn btn-dark mt-3 d-block" %>
-          <%=link_to 'back', vision_back_path(@vision.id), class: "btn btn-dark mt-3 d-block" %>
-        </div>
-
-    <% end %>  
+          <%= form.submit "コミット", class: "btn btn-dark btn btn-primary w-100 py-2 mt-3" %>
+      <% end %>  
+            <div class="mx-auto">
+              <%=link_to 'Win', vision_win_path(@vision.id), class: "btn btn-dark mt-3 d-block" %>
+              <%=link_to 'back', vision_back_path(@vision.id), class: "btn btn-dark mt-3 d-block" %>
+            </div>
+      
+     
       <div class="todaygoals mt-5">
-      <h4>＜目標一覧＞</h4>
-      <% @todaygoals.each do |todaygoal| %>
-        <p>
-            日付：<%= todaygoal.created_at %><br>
-            目的：<%= todaygoal.object %><br>
-            計画：<%= todaygoal.plan %><br>
-            行動：<%= todaygoal.action %>
-        </p>
-      <% end %>
-    </div>
+       <h4>＜目標一覧＞</h4>
+        <% @todaygoals.each do |todaygoal| %>
+          <p>
+              日付：<%= todaygoal.created_at %><br>
+              目的：<%= todaygoal.object %><br>
+              計画：<%= todaygoal.plan %><br>
+              行動：<%= todaygoal.action %><br>
+          </p>
+        <% end %>
+      </div>
     </form>
   </div>
 </div>
+

@@ -21,7 +21,7 @@ footer p {
   top: 25%;
   width: 100%;
   text-align: center;
-  background-color: rgb(244, 131, 216);
+  background-color: #FF3333;
   transform: skewY(20deg);
 }
 
